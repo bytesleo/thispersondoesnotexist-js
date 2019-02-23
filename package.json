@@ -1,0 +1,49 @@
+{
+    "name": "thispersondoesnotexist-js",
+    "version": "1.0.0",
+    "description": "Api for www.thispersondoesnotexist.com",
+    "main": "dist/index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kevoj/thispersondoesnotexist-js.git"
+    },
+    "scripts": {
+        "start": "npm run compile & nodemon index.js --exec babel-node",
+        "compile": "babel --watch src -d dist",
+        "test": "mocha --compilers js:babel-register"
+    },
+    "keywords": [
+        "thispersondoesnotexist",
+        "thispersondoesnotexist.com",
+        "thispersondoesnotexist-js",
+        "thispersondoesnotexist-node",
+        "avatar",
+        "random avatar",
+        "image avatar",
+        "user profile",
+        "random image",
+        "npm avatar"
+    ],
+    "author": "Leonardo Rico Guevara - https://github.com/kevoj",
+    "license": "MIT",
+    "engines": {
+        "node": "^6.2.2",
+        "npm": "^3.9.5"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.0",
+        "babel-plugin-add-module-exports": "^0.2.1",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-stage-2": "^6.24.1",
+        "babel-register": "^6.26.0",
+        "mocha": "^5.0.1",
+        "nodemon": "^1.12.0"
+    },
+    "dependencies": {
+        "node-schedule": "^1.3.2",
+        "request": "^2.88.0",
+        "sharp": "^0.21.3"
+    }
+}

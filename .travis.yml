@@ -1,0 +1,11 @@
+sudo: false
+language: node_js
+node_js:
+  - node
+  - 7
+  - 6
+services:
+  - redis-server
+script:
+  - npm test
+fail_fast: true
