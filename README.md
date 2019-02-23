@@ -34,7 +34,7 @@ const dnte = new ThisPersonDoesNotExist();
 dnte.getImage({
 	width: 256, // Width (default 128)
 	height: 256, // Height (default 128)
-	type: 'file'  // file or Base64 (default file)
+	type: 'file'  // file or base64 (default file)
 	path: 'avatars' // (default ./)
 }).then(res  => {
 	console.log('result->', res);
@@ -50,7 +50,7 @@ dnte.on('created', (info) => {
 	time: '*/10 * * * * *', // every 10 seconds
 	width: 256, // Width (default 128)
 	height: 256, // Height (default 128)
-	type: 'file',  // file or Base64 (default file)
+	type: 'file',  // file or base64 (default file)
 	path: 'avatars' // (default ./)
 });
 
@@ -61,6 +61,8 @@ dnte.on('created', (info) => {
 ![Imgur](https://i.imgur.com/6Mik0NN.jpg)
 ![Imgur](https://i.imgur.com/c4sMVAI.jpg)
 ![Imgur](https://i.imgur.com/2iP68s6.jpg)
+![Imgur](https://i.imgur.com/qB1wmax.jpg)
+![Imgur](https://i.imgur.com/jGcYhIA.jpg)
 
 
 ## Development

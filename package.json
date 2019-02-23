@@ -1,6 +1,6 @@
 {
     "name": "thispersondoesnotexist-js",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Api for www.thispersondoesnotexist.com",
     "main": "dist/index.js",
     "repository": {
