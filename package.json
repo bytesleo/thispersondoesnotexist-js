@@ -11,7 +11,7 @@
         "start": "npm run watch & nodemon index.js --exec babel-node",
         "compile": "babel src -d dist",
         "watch": "babel --watch src -d dist",
-        "test": "mocha --compilers js:babel-register",
+        "test": "mocha --require babel-register",
         "docs": "./node_modules/jsdoc/jsdoc.js src -d docs --verbose"
     },
     "keywords": [
