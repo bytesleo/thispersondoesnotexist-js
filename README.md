@@ -49,9 +49,8 @@ dnte.getImage({
 	console.log('result->', res);
     /*
     { 
-    	status: true,
-  		data: 
-   		{ 
+		status: true,
+		data:	{ 
         	format: 'jpeg',
      		width: 256,
      		height: 256,
@@ -59,10 +58,9 @@ dnte.getImage({
      		premultiplied: false,
      		size: 9575,
      		name: 'Q2m4yrR9Is.jpeg' 
-        }
-     }
-     */
-    
+    	}
+	}
+	*/
 }).catch(err  => {
 	console.log('error->', err);
 });
@@ -76,9 +74,8 @@ dnte.on('created', (info) => {
 	console.log('file created->', info);
     /*
     { 
-    	status: true,
-  		data: 
-   		{ 
+		status: true,
+		data:	{ 
         	format: 'jpeg',
      		width: 256,
      		height: 256,
@@ -86,9 +83,9 @@ dnte.on('created', (info) => {
      		premultiplied: false,
      		size: 9575,
      		name: 'Q2m4yrR9Is.jpeg' 
-        }
-     }
-     */
+    	}
+	}
+	*/
 }).cron({
 	time: '*/10 * * * * *', // Generates an image every 10 seconds, and triggers the "created" event
 	width: 256, // width of the image (default 128)
@@ -119,9 +116,17 @@ dnte.on('created', (info) => {
 
 `npm run compile`
 
+### Watch
+
+`npm run watch`
+
 ### Test
 
 `npm test`
+
+### Docs
+
+`npm run docs`
 
 ## License
 
