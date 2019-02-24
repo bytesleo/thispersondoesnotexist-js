@@ -47,18 +47,18 @@ dnte.getImage({
 	path: 'avatars' // Path to save (Applies to type file) (default .)
 }).then(res  => {
 	console.log('result->', res);
-    /*
-    { 
+	/*
+	{ 
 		status: true,
-		data:	{ 
-        	format: 'jpeg',
-     		width: 256,
-     		height: 256,
-     		channels: 3,
-     		premultiplied: false,
-     		size: 9575,
-     		name: 'Q2m4yrR9Is.jpeg' 
-    	}
+		data:{ 
+			format: 'jpeg',
+			width: 256,
+			height: 256,
+			channels: 3,
+			premultiplied: false,
+			size: 9575,
+			name: 'Q2m4yrR9Is.jpeg' 
+		}
 	}
 	*/
 }).catch(err  => {
@@ -72,18 +72,18 @@ dnte.getImage({
 
 dnte.on('created', (info) => {
 	console.log('file created->', info);
-    /*
-    { 
+	/*
+	{ 
 		status: true,
-		data:	{ 
-        	format: 'jpeg',
-     		width: 256,
-     		height: 256,
-     		channels: 3,
-     		premultiplied: false,
-     		size: 9575,
-     		name: 'Q2m4yrR9Is.jpeg' 
-    	}
+		data:{ 
+			format: 'jpeg',
+			width: 256,
+			height: 256,
+			channels: 3,
+			premultiplied: false,
+			size: 9575,
+			name: 'Q2m4yrR9Is.jpeg' 
+		}
 	}
 	*/
 }).cron({
