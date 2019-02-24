@@ -25,36 +25,80 @@ yarn add thispersondoesnotexist-js
 
 ```javascript
 
-import  ThisPersonDoesNotExist  from  './dist/index';
+import ThisPersonDoesNotExist from 'thispersondoesnotexist-js';
 
 const dnte = new ThisPersonDoesNotExist();
 
-// GET IMAGE
-
-dnte.getImage({
-	width: 256, // Width (default 128)
-	height: 256, // Height (default 128)
-	type: 'file'  // file or base64 (default file)
-	path: 'avatars' // (default ./)
-}).then(res  => {
+dnte.getImage().then(res  => {
 	console.log('result->', res);
 }).catch(err  => {
 	console.log('error->', err);
 });
-  
-// CRON JOB
 
-dnte.on('created', (info) => {
-	console.log('file created->', info);
-}).cron({
-	time: '*/10 * * * * *', // every 10 seconds
-	width: 256, // Width (default 128)
-	height: 256, // Height (default 128)
-	type: 'file',  // file or base64 (default file)
-	path: 'avatars' // (default ./)
+```
+### Method getImage({options})
+
+```javascript
+
+dnte.getImage({
+	width: 256, // width of the image (default 128)
+	height: 256, // high of the image (default 128)
+	type: 'file',  // Type of file to generate (file or base64) (default file)
+	path: 'avatars' // Path to save (Applies to type file) (default .)
+}).then(res  => {
+	console.log('result->', res);
+    /*
+    { 
+    	status: true,
+  		data: 
+   		{ 
+        	format: 'jpeg',
+     		width: 256,
+     		height: 256,
+     		channels: 3,
+     		premultiplied: false,
+     		size: 9575,
+     		name: 'Q2m4yrR9Is.jpeg' 
+        }
+     }
+     */
+    
+}).catch(err  => {
+	console.log('error->', err);
 });
 
 ```
+### Method cron({options})
+
+```javascript
+
+dnte.on('created', (info) => {
+	console.log('file created->', info);
+    /*
+    { 
+    	status: true,
+  		data: 
+   		{ 
+        	format: 'jpeg',
+     		width: 256,
+     		height: 256,
+     		channels: 3,
+     		premultiplied: false,
+     		size: 9575,
+     		name: 'Q2m4yrR9Is.jpeg' 
+        }
+     }
+     */
+}).cron({
+	time: '*/10 * * * * *', // Generates an image every 10 seconds, and triggers the "created" event
+	width: 256, // width of the image (default 128)
+	height: 256, // high of the image (default 128)
+	type: 'file',  // Type of file to generate (file or base64) (default file)
+	path: 'avatars' // Path to save (Applies to type file) (default .)
+});
+
+```
+
 ## Results
 
 ![Imgur](https://i.imgur.com/9BZcepd.jpg)
