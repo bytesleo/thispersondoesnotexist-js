@@ -1,6 +1,6 @@
 {
     "name": "thispersondoesnotexist-js",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Api for www.thispersondoesnotexist.com",
     "main": "dist/index.js",
     "repository": {
@@ -28,10 +28,6 @@
     ],
     "author": "Leonardo Rico Guevara - https://github.com/kevoj",
     "license": "MIT",
-    "engines": {
-        "node": "^6.2.2",
-        "npm": "^3.9.5"
-    },
     "devDependencies": {
         "babel-cli": "^6.26.0",
         "babel-core": "^6.26.0",
